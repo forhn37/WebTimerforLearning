@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 상위컨텐츠부터 아래로 css 설정 */
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* 상위컨텐츠 css 설정 */
+header {
+  height: 15vh;
+  width: 100vw;
+  background-color: gray;
+}
+
+main {
+  height: 75vh;
+  width: 100vw;
+  background-color: black;
+}
+
+footer {
+  height: 10vh;
+  width: 100vw;
+  background-color: gray
+}
+
+/*  */
+
