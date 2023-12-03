@@ -12,20 +12,33 @@
     <header>
       <nav>
         <div>
-          <input id='timer'>
-          <label for='timer'>타이머</label>
+          <input type='button' id='timer'>
+          <label for='timer' value='타이머'></label>
         </div>
       </nav>
     </header>
     <main>
-      <h1 id = 'object'>학습과제</h1>
-      <div id = 'timercontroller'></div>
-      <div id = 'sentence'></div>
+      <div class='main_header'>
+        <h1 id='object'></h1>
+      </div>
+      <div class='main_main'>
+        <div id='timercontroller'></div>
+        <div id='start_stop_reload'>
+          <input type="button" value="START">
+          <input type="button" value="STOP">
+          <input type="button" value="RELOAD">
+        </div>
+      </div>
+      <div class='main_footer'>
+        <input type="button">
+        <div id='sentence'></div>
+        <input type="button">
+      </div>
     </main>
     <footer>
       <ul>
-        <input id ='daynightmode'>
-        <input id ='fullscreenconversion'>
+        <input id='daynightmode'>
+        <input id='fullscreenconversion'>
       </ul>
     </footer>
   </div>
