@@ -52,6 +52,57 @@ nav {
   height: 80px;
   cursor: pointer;
 }
+/* main 설정 */
+
+.main_header {
+  color: aliceblue;
+  border-style: solid;
+  border-color: aliceblue;
+  height: 160px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#object {
+  font-size:60px
+}
+.main_main {
+  height: 400px;
+  border-style: solid;
+  border-color: aliceblue;
+  width:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+#timecontroller {
+  border-style: solid;
+  border-color: aliceblue;
+  width: 700px;
+  height: 160px;
+}
+#start_stop_reload {
+  width: 150px;
+  height: 180px;
+  border-style: solid;
+  border-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#start_stop_reload input {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+}
+.main_footer {
+  height: 200px;
+  border-style: solid;
+  border-color: aliceblue;
+  width: auto;
+}
 
 /* footer설정 */
 footer>ul {
