@@ -84,7 +84,7 @@ nav {
 }
 #start_stop_reload {
   width: 150px;
-  height: 180px;
+  height: 170px;
   border-style: solid;
   border-color: aliceblue;
   display: flex;
@@ -93,8 +93,8 @@ nav {
   align-items: center;
 }
 #start_stop_reload input {
-  width: 100px;
-  height: 40px;
+  width: 110px;
+  height: 50px;
   border-radius: 10px;
 }
 .main_footer {
@@ -102,6 +102,25 @@ nav {
   border-style: solid;
   border-color: aliceblue;
   width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_footer input {
+  border-style: solid;
+  border-color: aliceblue;
+  width: 50px;
+  height: 50px;
+}
+#sentence {
+  color: aliceblue;
+  border-style: solid;
+  border-color: aliceblue;
+  width: 700px;
+  height: 120px;
+  margin: 0 10px 0 10px;
+  font-size: 60px;
+  text-align: center;
 }
 
 /* footer설정 */
