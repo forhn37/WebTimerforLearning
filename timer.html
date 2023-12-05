@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WebTimer</title>
-  <link rel="stylesheet" href ="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div id="root">
     <header>
       <nav>
-          <img id='timer' src ='./src/timericon.png' alt="timerimage">
+        <img id='timer' src='./src/timericon.png' alt="timerimage">
       </nav>
     </header>
     <main>
@@ -21,7 +21,7 @@
       </div>
       <div class='main_main'>
         <div id='timecontroller'>
-          <span id="timecontroller">00:00</span>
+          <span id="time">00:00</span>
           <div>
             <button onclick="adjustTime(1, 'minute')">Up (분)</button>
             <button onclick="adjustTime(-1, 'minute')">Down (분)</button>
@@ -32,9 +32,10 @@
           </div>
         </div>
         <div id='start_stop_reload'>
-          <input type="button" value="START">
-          <input type="button" value="STOP">
-          <input type="button" value="RELOAD">
+          <button onclick="startTimer()">START</button>
+          <button onclick="stopTimer()">STOP</button>
+          <button onclick="reloadTimer()">RELOAD
+          </button>
         </div>
       </div>
       <div class='main_footer'>
@@ -53,6 +54,61 @@
   </div>
 </body>
 <script>
-  
+  let minutes = 0;
+  let seconds = 0;
+  let timerInterval;
+
+  function adjustTime(amount, unit) {
+    if (unit === 'minute') {
+      minutes += amount;
+      if (minutes < 0) {
+        minutes = 0;
+      }
+    } else if (unit === 'second') {
+      seconds += amount;
+      if (seconds < 0) {
+        seconds = 0;
+      }
+    }
+
+    updateTimerDisplay();
+  }
+
+  function updateTimerDisplay() {
+    document.getElementById('timer').innerText = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  }
+
+  function startTimer() {
+    if (timerInterval) {
+      clearInterval(timerInterval);
+    }
+
+    timerInterval = setInterval(function () {
+      if (minutes > 0 || seconds > 0) {
+        if (seconds === 0) {
+          minutes--;
+          seconds = 59;
+        } else {
+          seconds--;
+        }
+        updateTimerDisplay();
+      } else {
+        clearInterval(timerInterval);
+        alert('타이머 종료!');
+      }
+    }, 1000); // 1초마다 감소
+  }
+
+  function stopTimer() {
+    clearInterval(timerInterval);
+  }
+
+  function reloadTimer() {
+    stopTimer();
+    minutes = 0;
+    seconds = 0;
+    updateTimerDisplay();
+  }
 </script>
+
 </html>

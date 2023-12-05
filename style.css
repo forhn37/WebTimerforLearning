@@ -81,6 +81,14 @@ nav {
   border-color: aliceblue;
   width: 700px;
   height: 160px;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#timecontroller 
+#time {
+  font-size: 100px;
 }
 #start_stop_reload {
   width: 150px;
@@ -92,7 +100,7 @@ nav {
   justify-content: space-around;
   align-items: center;
 }
-#start_stop_reload input {
+#start_stop_reload button {
   width: 110px;
   height: 50px;
   border-radius: 10px;
