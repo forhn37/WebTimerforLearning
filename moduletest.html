@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타이머 예제</title>
+  <style>
+    #timer {
+      font-size: 24px;
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <span id="timecontroller">00:00</span>
+  <div>
+    <button onclick="adjustTime(1, 'minute')">Up (분)</button>
+    <button onclick="adjustTime(-1, 'minute')">Down (분)</button>
+  </div>
+  <div>
+    <button onclick="adjustTime(1, 'second')">Up (초)</button>
+    <button onclick="adjustTime(-1, 'second')">Down (초)</button>
+  </div>
+  <!-- <button onclick="startTimer()">Start</button>
+  <button onclick="stopTimer()">Stop</button>
+  <button onclick="reloadTimer()">Reload</button> -->
+
+  <script>
+    let minutes = 0;
+    let seconds = 0;
+    let timerInterval;
+
+    function adjustTime(amount, unit) {
+      if (unit === 'minute') {
+        minutes += amount;
+        if (minutes < 0) {
+          minutes = 0;
+        }
+      } else if (unit === 'second') {
+        seconds += amount;
+        if (seconds < 0) {
+          seconds = 0;
+        }
+      }
+
+      updateTimerDisplay();
+    }
+
+    function updateTimerDisplay() {
+      document.getElementById('timer').innerText = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    function startTimer() {
+      if (timerInterval) {
+        clearInterval(timerInterval);
+      }
+
+      timerInterval = setInterval(function () {
+        if (minutes > 0 || seconds > 0) {
+          if (seconds === 0) {
+            minutes--;
+            seconds = 59;
+          } else {
+            seconds--;
+          }
+          updateTimerDisplay();
+        } else {
+          clearInterval(timerInterval);
+          alert('타이머 종료!');
+        }
+      }, 1000); // 1초마다 감소
+    }
+
+    function stopTimer() {
+      clearInterval(timerInterval);
+    }
+
+    function reloadTimer() {
+      stopTimer();
+      minutes = 0;
+      seconds = 0;
+      updateTimerDisplay();
+    }
+  </script>
+
+</body>
+
+</html>

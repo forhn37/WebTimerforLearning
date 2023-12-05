@@ -20,7 +20,17 @@
         <h1 id='object'>for startup</h1>
       </div>
       <div class='main_main'>
-        <div id='timecontroller'></div>
+        <div id='timecontroller'>
+          <span id="timecontroller">00:00</span>
+          <div>
+            <button onclick="adjustTime(1, 'minute')">Up (분)</button>
+            <button onclick="adjustTime(-1, 'minute')">Down (분)</button>
+          </div>
+          <div>
+            <button onclick="adjustTime(1, 'second')">Up (초)</button>
+            <button onclick="adjustTime(-1, 'second')">Down (초)</button>
+          </div>
+        </div>
         <div id='start_stop_reload'>
           <input type="button" value="START">
           <input type="button" value="STOP">
@@ -30,7 +40,7 @@
       <div class='main_footer'>
         <input type="image" src="./src/arrow_left.png" alt="화살표">
         <!-- 출처 <a href="https://kr.freepik.com/free-vector/flat-design-arrow-collection_5940015.htm#query=%ED%99%94%EC%82%B4%ED%91%9C%20png&position=0&from_view=keyword&track=ais&uuid=1d3bd1d6-1b3e-410e-80df-99c33fa147d4">Freepik</a> -->
-        <ul id='sentence'>사랑해요임하나</ul>
+        <div id='sentence'>Do it something i want</div>
         <input type="image" src="./src/arrow_right.png" alt="화살표">
       </div>
     </main>
@@ -42,5 +52,7 @@
     </footer>
   </div>
 </body>
-
+<script>
+  
+</script>
 </html>
