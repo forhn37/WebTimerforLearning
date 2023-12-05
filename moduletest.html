@@ -14,15 +14,12 @@
 </head>
 
 <body>
-  <span id="timecontroller">00:00</span>
-  <div>
-    <button onclick="adjustTime(1, 'minute')">Up (분)</button>
-    <button onclick="adjustTime(-1, 'minute')">Down (분)</button>
-  </div>
-  <div>
-    <button onclick="adjustTime(1, 'second')">Up (초)</button>
-    <button onclick="adjustTime(-1, 'second')">Down (초)</button>
-  </div>
+
+  <span id="timer">00:00</span>
+  <button onclick="adjustTime(1, 'minute')">Up (분)</button>
+  <button onclick="adjustTime(-1, 'minute')">Down (분)</button>
+  <button onclick="adjustTime(1, 'second')">Up (초)</button>
+  <button onclick="adjustTime(-1, 'second')">Down (초)</button>
   <button onclick="startTimer()">Start</button>
   <button onclick="stopTimer()">Stop</button>
   <button onclick="reloadTimer()">Reload</button>
