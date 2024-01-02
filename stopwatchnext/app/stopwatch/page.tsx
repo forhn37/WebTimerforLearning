@@ -1,7 +1,7 @@
-export default function Home() {
+export default function StopWatchHome() {
   return (
-    <main>
+    <div className="w-1/2 h-1/2 bg-slate-200">
       hihihi
-    </main>
+    </div>
   )
 }
