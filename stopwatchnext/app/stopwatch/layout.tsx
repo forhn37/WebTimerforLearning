@@ -4,7 +4,7 @@ export default function Home({
   children: React.ReactNode
 }) {
   return (
-    <div className="bg-slate-600 w-screen h-screen">
+    <div className="w-screen h-screen">
       {children}
     </div>
   )
