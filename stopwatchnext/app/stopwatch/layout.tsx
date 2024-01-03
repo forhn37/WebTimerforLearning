@@ -6,12 +6,12 @@ export default function Home({
   children: React.ReactNode
 }) {
   return (
-    <div className="w-screen h-screen">
+    <div className="w-screen h-screen ">
       <Image
         src="/daynight.png"
         width={100}
         height={100}
-        alt="Picture of the author" className="ml-auto"
+        alt="Picture of the author" className="ml-auto mr-10 mt-10"
       />
       {children}
     </div>
